@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Desktop"
+		},
+		{
+			"path": "../../Desktop/Новая папка"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Desktop"
+	}
+}
