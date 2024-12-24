@@ -8,10 +8,10 @@ let fft;
 
 function preload() {
     soundFormats('mp3', 'wav');
-    sound = loadSound('assets/yee-king_track.mp3', () => {
-        console.log("sound is loaded!"); 
-        isLoaded = true;
-    });
+    sound = loadSound('assets/yee-king_track.mp3', function () {
+            console.log("sound is loaded!");
+            isLoaded = true;
+        });
     isInitialised = false; 
     sound.setVolume(0.2); 
 }
