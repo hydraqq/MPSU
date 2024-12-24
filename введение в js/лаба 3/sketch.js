@@ -1,24 +1,22 @@
-let sound; // Переменная где будет находится аудио-дорожка
-let isInitialised; // Состояние, которое обозначает инициализированы ли значения или нет
+let sound;
+let isInitialised;
 let isLoaded = false;
 let amplitude;
 let amplitudes = [];
-
 let fft;
 
 function preload() {
-    soundFormats('mp3', 'wav'); // Определяем аудио форматы, поддерживаемые плеером
+    soundFormats('mp3', 'wav');
     sound = loadSound('assets/yee-king_track.mp3', () => {
-        console.log("sound is loaded!"); // Загружаем музыку и при успешной загрузке выводим в консоль сообщение, что музыка загрузилась
-        isLoaded = true;
+        console.log("sound is loaded!");
     });
     isInitialised = false; 
-    sound.setVolume(0.2); // Устанавливаем громкость на 20%
+    sound.setVolume(0.2);
 }
 
 function setup() {
     createCanvas(1024, 1024);
-    textAlign(CENTER); // Центрируем следующий текст по центру
+    textAlign(CENTER);
     textSize(32);
     
     amplitude = new p5.Amplitude();
@@ -27,7 +25,7 @@ function setup() {
 }
 
 function draw() {
-    background(30, 30, 30); // Темный фон
+    background(30, 30, 30);
     fill(255);
     
     if (isInitialised && !sound.isPlaying()) {
@@ -35,23 +33,16 @@ function draw() {
     } else if (sound.isPlaying()) {
         let level = amplitude.getLevel();
         text(level, width / 2, 40);
-
-        // Анализируем частоты
         let freqs = fft.analyze();
-        
-        // Отображаем круговые волны для частот
         translate(width / 2, height / 2);
         noFill();
 
         for (let i = 2; i < freqs.length - 2; i += 5) {
-            // Рассчитываем среднее значение для 5 ближайших HZ
             let avg = (freqs[i - 2] + freqs[i - 1] + freqs[i] + freqs[i + 1] + freqs[i + 2]) / 5;
-
-            let radius = map(avg, 0, 255, 50, 400); // Преобразуем значение в радиус круга
-
+            let radius = map(avg, 0, 255, 50, 400);
             strokeWeight(2);
-            stroke(map(i, 0, freqs.length, 0, 255), 100, 200); // Цвет круга
-            ellipse(0, 0, radius, radius); // Рисуем круг
+            stroke(map(i, 0, freqs.length, 0, 255), 100, 200);
+            ellipse(0, 0, radius, radius);
         }
     }
 }
@@ -61,7 +52,7 @@ function keyPressed() {
         isInitialised = true;
         
         if (isLoaded)
-            sound.loop(); // Запускаем звук в цикле с нормальной скоростью
+            sound.loop();
     } else {
         if (key == ' ') {
             if (sound.isPaused()) sound.play();
