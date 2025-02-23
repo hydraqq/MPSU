@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторные работы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaeaea; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            border-radius: 15px;
+            text-align: center;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #fff;
+            background: #ee00ff;
+            border-radius: 50px;
+            transition: background 0.3s;
+            position: relative;
+        }
+        .nav a:hover {
+            background: #d200c4;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.nav a');
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            document.body.appendChild(tooltip);
+
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', (e) => {
+                    const message = button.getAttribute('data-tooltip');
+                    tooltip.textContent = message;
+                    tooltip.style.left = e.pageX + 'px';
+                    tooltip.style.top = e.pageY + 20 + 'px';
+                    tooltip.style.opacity = 1;
+                });
+
+                button.addEventListener('mouseout', () => {
+                    tooltip.style.opacity = 0;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторные работы</h1>
+        <h2>Проскуряков Никита</h2>
+        <p>Выберите для просмотра:</p>
+        <div class="nav">
+            <a href="lab1/index.html" data-tooltip="Визуализатор звука">Лабораторная 1</a>
+            <a href="lab2/index.html" data-tooltip="Рисование">Лабораторная 2</a>
+        </div>
+    </div>
+</body>
+</html>

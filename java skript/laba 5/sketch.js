@@ -1,0 +1,89 @@
+let sound;
+let isInitialised;
+let isLoaded = false;
+let amplitude;
+let amplitudes = [];
+let fft;
+
+function preload() {
+    soundFormats('mp3', 'wav');
+    sound = loadSound('assets/segway_loop.mp3', function () {
+            console.log("sound is loaded!");
+            isLoaded = true;
+        });
+    isInitialised = false; 
+    sound.setVolume(0.2); 
+}
+
+function setup() {
+    createCanvas(1024, 1024);
+    textAlign(CENTER);
+    textSize(32);
+    
+    amplitude = new p5.Amplitude();
+    
+    for (let i = 0; i < 100; i++) {
+        amplitudes.push(0);
+    }
+    
+    fft = new p5.FFT();
+}
+
+function draw() {
+    background(30, 30, 30);
+    fill(255);
+    
+    if (isInitialised && !sound.isPlaying()) {
+        text("Press any key for play sound", width / 2, height / 2);
+    } else if (sound.isPlaying()) {
+
+        let freqs = fft.analyze();
+        
+        push();
+        translate(width / 2, height / 2);
+        noFill();
+        for (let i = 2; i < freqs.length - 2; i += 5) {
+            let avg = (freqs[i - 2] + freqs[i - 1] + freqs[i] + freqs[i + 1] + freqs[i + 2]) / 5;
+            let radius = map(avg, 0, 255, 50, 400);
+            strokeWeight(2);
+            stroke(map(i, 0, freqs.length, 0, 255), 100, 200);
+            ellipse(0, 0, radius, radius);
+        }
+        pop();
+        
+        drawWave();
+    }
+}
+
+function drawWave() {
+    let level = amplitude.getLevel();
+    amplitudes.push(level);
+    amplitudes.shift();
+    
+    stroke(160, 50, 255);
+    strokeWeight(3);
+    noFill();
+    
+    beginShape();
+    let centerY = height * 3/4;
+    for (let i = 0; i < amplitudes.length; i++) {
+
+        let y = centerY - (amplitudes[i] * height / 2);
+        vertex(map(i, 0, amplitudes.length, 0, width), y);
+    }
+    endShape();
+}
+
+function keyPressed() {
+    if (!isInitialised) {
+        isInitialised = true;
+        
+        if (isLoaded)
+            sound.loop();
+    } else {
+        if (key == ' ') {
+            if (sound.isPaused()) sound.play();
+            else sound.pause();
+        }
+    }
+}
