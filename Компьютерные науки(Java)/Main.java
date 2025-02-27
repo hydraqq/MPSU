@@ -6,7 +6,6 @@ interface Worker {
     void performDuties();
 }
 
-// Класс Person
 class Person {
     private String name;
     private String surname;
