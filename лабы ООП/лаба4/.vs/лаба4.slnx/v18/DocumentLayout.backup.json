@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\flane\\Desktop\\\u043B\u0430\u0431\u04304\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E06A411-BC87-4961-ACF9-FD482919FF68}|\u043B\u0430\u0431\u04304\\\u043B\u0430\u0431\u04304.csproj|c:\\users\\flane\\desktop\\\u043B\u0430\u0431\u04304\\\u043B\u0430\u0431\u04304\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E06A411-BC87-4961-ACF9-FD482919FF68}|\u043B\u0430\u0431\u04304\\\u043B\u0430\u0431\u04304.csproj|solutionrelative:\u043B\u0430\u0431\u04304\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\flane\\Desktop\\\u043B\u0430\u0431\u04304\\\u043B\u0430\u0431\u04304\\Program.cs",
+              "RelativeDocumentMoniker": "\u043B\u0430\u0431\u04304\\Program.cs",
+              "ToolTip": "C:\\Users\\flane\\Desktop\\\u043B\u0430\u0431\u04304\\\u043B\u0430\u0431\u04304\\Program.cs*",
+              "RelativeToolTip": "\u043B\u0430\u0431\u04304\\Program.cs*",
+              "ViewState": "AgIAAPwAAAAAAAAAAADwvyMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T16:48:53.47Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

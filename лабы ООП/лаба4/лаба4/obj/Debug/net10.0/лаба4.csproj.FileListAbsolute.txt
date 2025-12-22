@@ -1,0 +1,14 @@
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.AssemblyInfoInputs.cache
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.AssemblyInfo.cs
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.csproj.CoreCompileInputs.cache
+C:\Users\flane\Desktop\лаба4\лаба4\bin\Debug\net10.0\лаба4.exe
+C:\Users\flane\Desktop\лаба4\лаба4\bin\Debug\net10.0\лаба4.deps.json
+C:\Users\flane\Desktop\лаба4\лаба4\bin\Debug\net10.0\лаба4.runtimeconfig.json
+C:\Users\flane\Desktop\лаба4\лаба4\bin\Debug\net10.0\лаба4.dll
+C:\Users\flane\Desktop\лаба4\лаба4\bin\Debug\net10.0\лаба4.pdb
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.dll
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\refint\лаба4.dll
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.pdb
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\лаба4.genruntimeconfig.cache
+C:\Users\flane\Desktop\лаба4\лаба4\obj\Debug\net10.0\ref\лаба4.dll

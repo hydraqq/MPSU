@@ -1,0 +1,14 @@
+C:\Users\flane\Desktop\лаба9\лаба9\bin\Debug\net10.0\лаба9.exe
+C:\Users\flane\Desktop\лаба9\лаба9\bin\Debug\net10.0\лаба9.deps.json
+C:\Users\flane\Desktop\лаба9\лаба9\bin\Debug\net10.0\лаба9.runtimeconfig.json
+C:\Users\flane\Desktop\лаба9\лаба9\bin\Debug\net10.0\лаба9.dll
+C:\Users\flane\Desktop\лаба9\лаба9\bin\Debug\net10.0\лаба9.pdb
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.AssemblyInfoInputs.cache
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.AssemblyInfo.cs
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.csproj.CoreCompileInputs.cache
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.dll
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\refint\лаба9.dll
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.pdb
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\лаба9.genruntimeconfig.cache
+C:\Users\flane\Desktop\лаба9\лаба9\obj\Debug\net10.0\ref\лаба9.dll
