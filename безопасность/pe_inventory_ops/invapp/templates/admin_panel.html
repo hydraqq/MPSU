@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Admin Panel ({{ mode }})</h2>
+  <p>This page is protected by server-side role check (Profile.role == "admin").</p>
+  <p>Unauthorized access returns 403 Forbidden.</p>
+
+  <h3>Users Management</h3>
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>Current Role</th>
+      <th>Actions</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.username }}</td>
+      <td>{{ user.role }}</td>
+      <td>
+        <a href="/vuln/delete_user/{{ user.id }}/" onclick="return confirm('Delete user {{ user.username }}?')">Delete</a>
+        |
+        <a href="/vuln/promote_user/{{ user.id }}/?role=admin">Promote to Admin</a>
+        |
+        <a href="/vuln/promote_user/{{ user.id }}/?role=moderator">Promote to Moderator</a>
+        |
+        <a href="/vuln/promote_user/{{ user.id }}/?role=user">Demote to User</a>
+      </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3">No users found</td></tr>
+    {% endfor %}
+  </table>
+{% endblock %}

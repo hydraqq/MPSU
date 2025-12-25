@@ -1,0 +1,5 @@
+pyjwt
+passlib==1.7.4
+python-dotenv
+pytest
+bcrypt==3.2.0

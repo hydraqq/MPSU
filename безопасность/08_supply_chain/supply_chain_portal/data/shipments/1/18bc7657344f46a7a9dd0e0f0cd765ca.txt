@@ -1,0 +1,2 @@
+Shipment doc for item SKU-1001
+Supplier: Demo Supplier

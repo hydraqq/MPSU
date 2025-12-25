@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <p>{{ domain_desc }}</p>
+    <p>Все операции защищены серверной проверкой RBAC.</p>
+  </div>
+
+  <h3>Ссылки</h3>
+  <ul>{% for url, label in actions %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
+
+  <h3>Мои объекты</h3>
+  <ul>{% for url, label in my_lists %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
+
+  <div class="card">
+    <strong>Админ функции:</strong>
+    <p>Следующие функции доступны только администраторам. Попытка неавторизованного доступа вернёт ошибку 403.</p>
+    <ul>
+      <li>Удалить пользователя</li>
+      <li>Открыть админ-панель</li>
+      <li>Повысить роль пользователя</li>
+    </ul>
+  </div>
+{% endblock %}
