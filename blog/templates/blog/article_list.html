@@ -1,0 +1,46 @@
+﻿{% extends 'blog/base.html' %}
+
+{% block title %}TechBlog — Главная{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-dark text-white rounded-3">
+    <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold">Технологии и IT</h1>
+        <p class="col-md-8 fs-4">Разборы, обзоры и новости из мира компьютеров, программирования и цифровых технологий.</p>
+        <a class="btn btn-primary btn-lg" href="#">Читать статьи</a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/600x200/1a1a2e/white?text=TechBlog" class="card-img-top" alt="Статья">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Обзор процессора AMD Ryzen 9</h5>
+                <p class="card-text text-muted flex-grow-1">Подробный тест флагманского процессора в играх и рабочих задачах.</p>
+                <a href="#" class="btn btn-sm btn-primary mt-2">Читать</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/600x200/0d1117/white?text=TechBlog" class="card-img-top" alt="Статья">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Linux для новичков: с чего начать</h5>
+                <p class="card-text text-muted flex-grow-1">Пошаговое руководство по переходу на Linux: выбор дистрибутива и установка.</p>
+                <a href="#" class="btn btn-sm btn-primary mt-2">Читать</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/600x200/161b22/white?text=TechBlog" class="card-img-top" alt="Статья">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">10 AI-инструментов для разработчика</h5>
+                <p class="card-text text-muted flex-grow-1">Подборка нейросетевых помощников, которые ускоряют написание кода.</p>
+                <a href="#" class="btn btn-sm btn-primary mt-2">Читать</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
